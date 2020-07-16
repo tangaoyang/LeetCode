@@ -51,5 +51,29 @@ int main(int argc, const char * argv[]) {
 //    for (int i = 0; i > 5; i++) {
 //        printf("123");
 //    }
+    // 剑指offer 05
+//    char* replaceSpace(char* s) {
+    char *s = "We are happy.";
+    int len = 0;
+    char *str = (char *)calloc(sizeof(char), 10000);
+    for (int i = 0, j = 0; i < 10000; i++) {
+        if (s[i] == ' ') {
+            str[j++] = '%';
+            str[j++] = '2';
+            str[j++] = '0';
+            continue;
+        }
+        str[j++] = s[i];
+    }
+//        int t = len;
+//        for(int i = len; i > 0; i--) {
+//            while (s[i] == ' ') {
+//                t += 2;
+//                s[t] = s[t - 2];
+//            }
+//        }
+//        return s;
+//    }
+    puts(str);
     return 0;
 }
